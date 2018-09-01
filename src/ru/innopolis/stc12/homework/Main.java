@@ -2,13 +2,6 @@ package ru.innopolis.stc12.homework;
 
 import java.lang.reflect.Proxy;
 
-/**
- * Получившиеся классы MathBox и ObjectBox не имеют связи между собой.
- * Это неправильно. Логичнее было бы сделать MathBox наследником ObjectBox.
- * Необходимо сделать такую связь, правильно распределить поля и методы.
- * Функциональность в целом должна сохраниться.
- */
-
 public class Main {
     public static void main(String[] args) throws WrongObjectArgument {
 
