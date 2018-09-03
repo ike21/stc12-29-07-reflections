@@ -3,8 +3,8 @@ package ru.innopolis.stc12.homework;
 import java.util.*;
 
 @Logged
-
-public class MathBox extends ObjectBox implements Box {
+@UseXml
+public class MathBox extends ObjectBox implements Box, SerializationXML {
     private Set<? extends Number> set = new TreeSet<>();
 
     public MathBox(Number[] array) throws WrongObjectArgument {
@@ -37,4 +37,12 @@ public class MathBox extends ObjectBox implements Box {
         return split;
     }
 
+    public void read() {
+        System.out.println("real read xml");
+
+    }
+
+    public void write() {
+        System.out.println("real write xml");
+    }
 }

@@ -23,6 +23,12 @@ public class Main {
         mathProxyCD.summator();
         mathProxyCD.splitter(4);
 
+        System.out.println();
+
+        SerializationXML mathProxySerialization = (SerializationXML) Proxy.newProxyInstance(SerializationInvocationHandler.class.getClassLoader(),
+                new Class[]{SerializationXML.class}, new SerializationInvocationHandler(mathBox));
+        mathProxySerialization.read();
+        mathProxySerialization.write();
     }
 
 }
